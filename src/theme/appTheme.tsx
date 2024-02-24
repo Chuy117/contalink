@@ -78,5 +78,8 @@ export const styles = StyleSheet.create({
     },
     flatPadding: {
         padding: 20
-    }
+    },
+    dark: {
+        color: '#000'
+    },
 });

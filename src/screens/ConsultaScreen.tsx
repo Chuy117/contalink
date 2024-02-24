@@ -10,6 +10,9 @@ import facturas from '../services/consultarAPI';
 import { Facturas, Invoice } from '../interfaces/facturasInterface';
 import moment from 'moment';
 import { ActIndicator } from '../components/ActIndicator';
+import { Appearance } from 'react-native';
+
+const colorScheme = Appearance.getColorScheme();
 
 export const ConsultaScreen = () => {
 
@@ -91,6 +94,9 @@ export const ConsultaScreen = () => {
                 !hideCal ?
                     <>
                         <DateTimePicker
+                            calendarTextStyle={colorScheme === 'dark' ? styles.dark : undefined}
+                            headerTextStyle={colorScheme === 'dark' ? styles.dark : undefined}
+                            weekDaysTextStyle={colorScheme === 'dark' ? styles.dark : undefined}
                             mode='range'
                             startDate={startDate}
                             endDate={endDate}
